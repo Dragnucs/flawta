@@ -1,0 +1,106 @@
+[
+  {
+    "id": "snasel",
+    "arabic": "السناسل",
+    "class": "Chain",
+    "description_en": "Metallic chain motif repeated 3–8 times with stable pitch.",
+    "description_ar": "مقطع معدني متكرر من 3 إلى 8 مرات.",
+    "core": true
+  },
+  {
+    "id": "snasel_daqa",
+    "arabic": "السناسل بالدقة",
+    "class": "Chain",
+    "description_en": "Accented chain with strong attack.",
+    "description_ar": "سناسل بضربة قوية في بداية المقطع.",
+    "core": true
+  },
+  {
+    "id": "nawaqes",
+    "arabic": "النواقس",
+    "class": "Bell",
+    "description_en": "Isolated metallic bell tone repeated in blocks.",
+    "description_ar": "ناقوس معدني معزول يتكرر في كتل.",
+    "core": true
+  },
+  {
+    "id": "naqous_daqa",
+    "arabic": "الناقوس بالدقة",
+    "class": "Bell",
+    "description_en": "Strong accented bell used as phrase punctuation.",
+    "description_ar": "ناقوس قوي للتأكيد وإنهاء الجملة.",
+    "core": true
+  },
+  {
+    "id": "water_short",
+    "arabic": "تغلي قصيرة",
+    "class": "Water",
+    "description_en": "Short bubbling water modulation.",
+    "description_ar": "مقطع مائي قصير يشبه الغليان.",
+    "core": false
+  },
+  {
+    "id": "water_pulsed",
+    "arabic": "ماء متقطع",
+    "class": "Water",
+    "description_en": "Segmented water tone broken into repetition blocks.",
+    "description_ar": "ماء متقطع منظم في كتل تكرارية.",
+    "core": false
+  },
+  {
+    "id": "water_soft",
+    "arabic": "ماء لين",
+    "class": "Water",
+    "description_en": "Soft controlled liquid roll.",
+    "description_ar": "رول مائي لين مضبوط.",
+    "core": false
+  },
+  {
+    "id": "semi_hollow",
+    "arabic": "رول متوسط",
+    "class": "Roll",
+    "description_en": "Mid-frequency semi-hollow roll.",
+    "description_ar": "رول متوسط الرنين غير عميق.",
+    "core": false
+  },
+  {
+    "id": "tight_roll",
+    "arabic": "رول سريع قصير",
+    "class": "Roll",
+    "description_en": "Short rapid oscillating roll.",
+    "description_ar": "رول سريع قصير المدة.",
+    "core": false
+  },
+  {
+    "id": "projection_high",
+    "arabic": "نبرة حادة",
+    "class": "Projection",
+    "description_en": "High metallic projection burst.",
+    "description_ar": "نبرة معدنية حادة قصيرة.",
+    "core": false
+  },
+  {
+    "id": "glide",
+    "arabic": "انزلاق صوتي",
+    "class": "Link",
+    "description_en": "Rising or falling pitch glide.",
+    "description_ar": "انزلاق نغمي صاعد أو نازل.",
+    "core": false
+  },
+  {
+    "id": "chain_extended",
+    "arabic": "سلسلة طويلة",
+    "class": "Chain",
+    "description_en": "Extended chain cascade (8–12 repetitions).",
+    "description_ar": "سلسلة ممتدة من 8 إلى 12 تكرار.",
+    "core": false
+  },
+  {
+    "id": "discipline_triplet",
+    "arabic": "تكرار ثلاثي",
+    "class": "Grammar",
+    "description_en": "Three-repeat structural discipline rule.",
+    "description_ar": "قاعدة التكرار الثلاثي المنظمة.",
+    "core": true
+  }
+]
