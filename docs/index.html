@@ -3,31 +3,72 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Flawta</title>
+        <title>Flawta — Acoustic Documentation</title>
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <header>
-            <h1>Flawta Acoustic Documentation</h1>
+            <div class="header-top">
+                <a href="index.html" class="site-title">Flawta</a>
+                <a
+                    href="index-ar.html"
+                    class="lang-switch"
+                    title="Switch to Arabic"
+                    >العربية</a
+                >
+            </div>
             <nav>
-                <a href="index.html">Home (EN)</a>
-                <a href="index-ar.html">الرئيسية (AR)</a>
-                <a href="standard.html">Standard (EN)</a>
-                <a href="standard-ar.html">المعيار (AR)</a>
-                <a href="lexicon.html">Lexicon (EN)</a>
-                <a href="lexicon-ar.html">المعجم (AR)</a>
-                <a href="methodology.html">Methodology (EN)</a>
-                <a href="methodology-ar.html">المنهجية (AR)</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="lexicon.html">Lexicon</a>
             </nav>
         </header>
         <main>
             <section class="card">
-                <h2>Project Scope</h2>
+                <h1>Flawta Acoustic Documentation</h1>
                 <p>
-                    This repository hosts the bilingual Flawta reference,
-                    including lexicon, standards, and methodology pages.
+                    This project hosts the bilingual reference for Flawta, a
+                    system for documenting and classifying acoustic units of
+                    traditional metallic instruments. It includes a lexicon of
+                    sound units, a naming standard, and the methodology used for
+                    classification.
                 </p>
             </section>
+
+            <section class="card">
+                <h2>Standard</h2>
+                <ul>
+                    <li>
+                        Core lexicon supports chain, bell, and grammar units.
+                    </li>
+                    <li>
+                        IDs are canonical and map to audio/spectrogram assets.
+                    </li>
+                    <li>
+                        Entries are expandable while preserving naming
+                        consistency.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Methodology</h2>
+                <p>
+                    The documentation process follows a structured pipeline to
+                    ensure consistency and reproducibility across all lexical
+                    entries.
+                </p>
+                <ol>
+                    <li>Define lexical unit IDs and bilingual descriptors.</li>
+                    <li>Attach source audio samples.</li>
+                    <li>Attach spectrogram images with matching filenames.</li>
+                    <li>
+                        Iterate classifications as new validated units appear.
+                    </li>
+                </ol>
+            </section>
         </main>
+        <footer>
+            <p>Flawta Acoustic Documentation</p>
+        </footer>
     </body>
 </html>

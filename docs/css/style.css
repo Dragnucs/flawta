@@ -1,46 +1,290 @@
-:root {
-  --bg: #0f1216;
-  --panel: #181d24;
-  --text: #ecf0f5;
-  --muted: #a9b4c2;
-  --accent: #4da3ff;
-  --border: #293241;
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-* { box-sizing: border-box; }
+:root {
+    --bg: #ffffff;
+    --bg-subtle: #f7f8fa;
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --accent: #2a5aa7;
+    --accent-hover: #1d4080;
+    --border: #e0e0e0;
+    --radius: 6px;
+    --max-width: 860px;
+    --font-body: "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-heading: Georgia, "Times New Roman", serif;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: var(--bg);
-  color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
 }
-header, main, footer {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem;
+
+/* ===== Header ===== */
+header {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem 0;
+    border-bottom: 1px solid var(--border);
 }
+
+.header-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.site-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.site-title:hover {
+    color: var(--accent);
+}
+
+/* Language switcher — applied directly to <a> */
+a.lang-switch {
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition:
+        background 0.15s,
+        color 0.15s;
+}
+
+a.lang-switch:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* ===== Navigation ===== */
 nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+    display: flex;
+    gap: 0;
+    border-top: 1px solid var(--border);
 }
+
 nav a {
-  color: var(--accent);
-  text-decoration: none;
-  border: 1px solid var(--border);
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition:
+        color 0.15s,
+        border-color 0.15s;
 }
-.card, .syllable {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+
+nav a:hover {
+    color: var(--accent);
 }
-.muted { color: var(--muted); }
+
+nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: 600;
+}
+
+/* ===== Main ===== */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+/* ===== Typography ===== */
+h1 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+p {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* ===== Cards ===== */
+.card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== Lexicon / Syllable entries ===== */
+.syllable {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.syllable h2 {
+    margin-bottom: 0.35rem;
+}
+
+.syllable p {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.syllable audio {
+    margin-top: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.syllable img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+/* ===== Lists ===== */
+ul,
+ol {
+    margin: 0.5rem 0 1rem 1.5rem;
+    color: var(--text-secondary);
+}
+
+li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+}
+
+/* ===== Muted text ===== */
+.muted {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ===== Code ===== */
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.875em;
+    background: var(--bg-subtle);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+}
+
+/* ===== Footer ===== */
+footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ===== Images ===== */
+img {
+    display: block;
+}
+
+/* ===== RTL Support ===== */
 [dir="rtl"] {
-  text-align: right;
+    text-align: right;
 }
-img { display:block; }
+
+[dir="rtl"] body {
+    font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", sans-serif;
+}
+
+[dir="rtl"] .site-title {
+    font-family: "Noto Sans Arabic", Georgia, serif;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2 {
+    font-family: "Noto Sans Arabic", Georgia, serif;
+}
+
+[dir="rtl"] nav {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+    margin-left: 0;
+    margin-right: 1.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 0.75rem 1rem 0;
+    }
+
+    .site-title {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        overflow-x: auto;
+    }
+
+    nav a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 1.25rem 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .card,
+    .syllable {
+        padding: 1rem;
+    }
+}
